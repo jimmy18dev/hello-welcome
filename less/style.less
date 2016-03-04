@@ -1,0 +1,87 @@
+@import "default";
+
+.filter{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    float: left;
+    display: inline-block;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 99;
+
+    .container{
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        margin-top: 15%;
+        float: left;
+        display: inline-block;
+        text-align: center;
+
+        h1{
+            font-size: 4.5em;
+            line-height: 1.5em;
+            color: rgba(255, 255, 255, 0.9);
+            font-family: 'Oleo Script';
+        }
+        p{
+            font-size: 1em;
+            line-height: 1.5em;
+            color: rgba(255, 255, 255, 0.9);
+        }
+        p.link{
+            margin-top: 4%;
+            a{
+                border: 1px solid #FFFFFF;
+                color: #FFFFFF;
+                padding: 10px 15px;
+                margin: 0px 5px;
+                border-radius: 3px;
+                background: transparent;
+                font-weight: bold;
+                font-size: 0.9em;
+
+                &:hover{
+                    cursor: pointer;
+                    background: rgba(255, 255, 255, 0.1);
+                }
+
+                &:active{
+                    background: rgba(255, 255, 255, 0.3);
+                }
+            }
+        }
+    }
+}
+
+.credit{
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    float: left;
+    display: inline-block;
+    color: rgba(255, 255, 255, 0.8);
+    text-align: right;
+    width: 98%;
+    font-size: 0.8em;
+    line-height: 1.5em;
+    padding: 0.5% 1%;
+    z-index: 999;
+
+    a{
+        color: rgba(255, 255, 255, 0.8);
+        &:hover{
+            color: rgba(255, 255, 255, 1);
+            text-decoration: underline;
+        }
+    }
+}
+
+/* Other Device and Screen */
+@media only screen and (min-width:1024px) and (max-width:1365px){@import "style-1024-1366";}
+@media only screen and (min-width:760px) and (max-width:1023px){@import "style-760-1023";}
+@media only screen and (min-width:520px) and (max-width:759px){@import "style-520-759";}
+@media only screen and (min-width:0px) and (max-width :519px){@import "style-0-519";}

@@ -1,0 +1,746 @@
+@import url(https://fonts.googleapis.com/css?family=Oleo+Script);
+html {
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+}
+a[href],
+button {
+  -ms-touch-action: none;
+  /* IE10 */
+  touch-action: none;
+  /* IE11 */
+}
+body {
+  background: #000000;
+  font-family: sans-serif, 'Open Sans';
+  overflow-y: scroll;
+  overflow-x: hidden;
+  color: rgba(0, 0, 0, 0.8);
+}
+.animated {
+  -webkit-transition: height 0.2s;
+  -moz-transition: height 0.2s;
+  transition: height 0.2s;
+}
+.filter {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  float: left;
+  display: inline-block;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 99;
+}
+.filter .container {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  margin-top: 15%;
+  float: left;
+  display: inline-block;
+  text-align: center;
+}
+.filter .container h1 {
+  font-size: 4.5em;
+  line-height: 1.5em;
+  color: rgba(255, 255, 255, 0.9);
+  font-family: 'Oleo Script';
+}
+.filter .container p {
+  font-size: 1em;
+  line-height: 1.5em;
+  color: rgba(255, 255, 255, 0.9);
+}
+.filter .container p.link {
+  margin-top: 4%;
+}
+.filter .container p.link a {
+  border: 1px solid #FFFFFF;
+  color: #FFFFFF;
+  padding: 10px 15px;
+  margin: 0px 5px;
+  border-radius: 3px;
+  background: transparent;
+  font-weight: bold;
+  font-size: 0.9em;
+}
+.filter .container p.link a:hover {
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.1);
+}
+.filter .container p.link a:active {
+  background: rgba(255, 255, 255, 0.3);
+}
+.credit {
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+  float: left;
+  display: inline-block;
+  color: rgba(255, 255, 255, 0.8);
+  text-align: right;
+  width: 98%;
+  font-size: 0.8em;
+  line-height: 1.5em;
+  padding: 0.5% 1%;
+  z-index: 999;
+}
+.credit a {
+  color: rgba(255, 255, 255, 0.8);
+}
+.credit a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+/* Other Device and Screen */
+@media only screen and (min-width: 1024px) and (max-width: 1365px) {
+  /* Header Style */
+  .header {
+    height: 80px;
+  }
+  .header a.logo {
+    padding: 25px 2%;
+    height: 30px;
+    font-size: 1.5em;
+    letter-spacing: 0.2em;
+  }
+  .header a.logo .mini {
+    font-size: 0.5em;
+    letter-spacing: 0em;
+  }
+  .header .avatar {
+    padding: 25px 2%;
+    height: 30px;
+  }
+  .header .avatar img {
+    width: 30px;
+    height: 30px;
+  }
+  .header a.create-btn {
+    padding: 25px 2%;
+    padding-top: 30px;
+    height: 25px;
+  }
+  .header a.create-btn i {
+    margin-right: 10px;
+    font-size: 0.8em;
+  }
+  .header #register-btn {
+    display: none;
+  }
+  /* Fake div for margin-top of page */
+  .fake-div {
+    height: 80px;
+  }
+  /* Welcome Style at homepage */
+  .welcome-banner {
+    width: 64%;
+    margin: 0% 18%;
+    padding: 5% 0%;
+  }
+  .welcome-banner h1 {
+    font-size: 0.9em;
+    line-height: 1.5em;
+    margin-bottom: 2%;
+  }
+  .welcome-banner p {
+    font-size: 1em;
+    line-height: 1.5em;
+  }
+  .welcome-banner p.message {
+    font-size: 1.4em;
+  }
+  .welcome-banner p.link {
+    padding-top: 5%;
+  }
+  .welcome-banner a.start-btn {
+    border-radius: 3px;
+    padding: 1% 3%;
+    font-size: 1em;
+    margin-bottom: 2%;
+  }
+  .welcome-banner a.start-btn i {
+    margin-right: 10px;
+    font-size: 0.8em;
+  }
+  .welcome-banner a.tutorial-btn {
+    font-size: 0.9em;
+    line-height: 1.5em;
+  }
+  .welcome-banner a.tutorial-btn i {
+    margin-right: 5px;
+    font-size: 0.8em;
+  }
+  /* Newsfeed style at Homepage */
+  .home-container {
+    width: 64%;
+    margin: 0% 18%;
+    float: left;
+    display: inline-block;
+  }
+  .home-container .filter {
+    width: 100%;
+    padding: 3% 0%;
+  }
+  .home-container .filter a {
+    padding: 3px;
+    margin-right: 1%;
+    font-size: 1em;
+  }
+  .home-container .filter a i {
+    font-size: 0.8em;
+    margin-right: 7px;
+  }
+  .home-container .newfeed-container .post-items {
+    width: 31.33%;
+    margin-top: 3%;
+    margin-right: 3%;
+  }
+  .home-container .newfeed-container .post-items:nth-child(3n) {
+    margin-right: 0%;
+    float: right;
+  }
+  .home-container .newfeed-container .post-items .image img {
+    min-height: 100px;
+  }
+  .home-container .newfeed-container .post-items .image figcaption {
+    top: 40%;
+    font-size: 2em;
+    line-height: 1.5em;
+  }
+  .home-container .newfeed-container .post-items .content {
+    padding: 5% 0%;
+    height: 180px;
+  }
+  .home-container .newfeed-container .post-items .content h2 {
+    font-size: 1.3em;
+    line-height: 1.3em;
+    margin-bottom: 3%;
+  }
+  .home-container .newfeed-container .post-items .content p {
+    line-height: 1.5em;
+    font-size: 0.9em;
+  }
+  .home-container .newfeed-container .post-items .content p.info {
+    margin-bottom: 3%;
+  }
+  .home-container .newfeed-container .post-items .content p.author {
+    margin-bottom: 2%;
+  }
+  .home-container .newfeed-container .post-empty-items {
+    padding: 25% 0%;
+    font-size: 1em;
+  }
+  .home-container .newfeed-container .post-empty-items i {
+    margin-right: 10px;
+  }
+  .home-container .people-information {
+    width: 80%;
+    padding: 2% 10%;
+    line-height: 1.5em;
+  }
+  .home-container .people-information .avatar {
+    margin-bottom: 2%;
+  }
+  .home-container .people-information .content p {
+    font-size: 1em;
+    line-height: 1.5em;
+  }
+  .home-container .people-information .content h1.name {
+    font-size: 2em;
+    line-height: 1.5em;
+  }
+  .home-container .people-information .content p.register_time {
+    font-size: 0.8em;
+    margin-bottom: 3%;
+  }
+  .home-container .people-information .content p.about {
+    font-size: 1em;
+    margin-bottom: 2%;
+  }
+  .home-container .people-information .content a {
+    font-size: 0.9em;
+    margin: 1% 0.5%;
+    padding: 0.5% 1%;
+  }
+  .home-container .people-information .content a i {
+    margin-right: 5px;
+  }
+  .home-container .logout-message {
+    padding: 25% 0%;
+    font-size: 1em;
+  }
+  .home-container .logout-message i {
+    margin-right: 10px;
+  }
+  /* Login and Register page Style */
+  .login-container {
+    width: 40%;
+    margin: 0% 30%;
+    margin-bottom: 5%;
+  }
+  .login-container .head {
+    width: 80%;
+    padding: 5% 10%;
+  }
+  .login-container .head h1 {
+    font-size: 1.4em;
+    line-height: 2em;
+  }
+  .login-container .head p {
+    font-size: 0.9em;
+    line-height: 1.5em;
+  }
+  .login-container .facebook {
+    width: 80%;
+    padding: 5% 10%;
+  }
+  .login-container .facebook p {
+    font-size: 0.8em;
+    line-height: 1.5em;
+  }
+  .login-container .facebook .facebook-button {
+    padding: 12px 0%;
+    font-size: 0.9em;
+    margin-bottom: 3%;
+  }
+  .login-container .facebook .facebook-button i {
+    margin-right: 10px;
+  }
+  .login-container .form {
+    width: 80%;
+    padding: 5% 10%;
+  }
+  .login-container .form .caption {
+    line-height: 2em;
+    font-size: 1.4em;
+  }
+  .login-container .form .input-text {
+    padding: 2% 0%;
+    font-size: 1em;
+    line-height: 1.5em;
+    margin-bottom: 5%;
+  }
+  .login-container .form .button-submit {
+    padding: 10px 6%;
+    font-size: 0.9em;
+    margin-top: 8%;
+  }
+  .login-container .form .button-submit i {
+    margin-right: 10px;
+    font-size: 0.8em;
+  }
+  .login-container .form p.forget {
+    font-size: 0.8em;
+  }
+  .login-container .note {
+    width: 80%;
+    padding: 5% 10%;
+    font-size: 0.8em;
+    line-height: 1.5em;
+  }
+  /* Error page Style */
+  .error-page {
+    width: 30%;
+    margin: 0% 35%;
+    margin-top: 140px;
+  }
+  .error-page .head {
+    width: 80%;
+    padding: 5% 10%;
+  }
+  .error-page .head p.icon {
+    font-size: 3em;
+    margin-bottom: 5%;
+  }
+  .error-page .head p {
+    font-size: 1em;
+    line-height: 1.5em;
+  }
+  .error-page .head p.error-code {
+    padding: 10px 20px;
+    font-size: 0.8em;
+  }
+  .error-page .head a.index-btn {
+    margin: 10% 0%;
+    padding: 10px 8%;
+  }
+  /* Blog article Style */
+  .blog {
+    width: 62%;
+    margin: 0% 19%;
+  }
+  .blog .cover {
+    min-height: 150px;
+  }
+  .blog .content {
+    width: 90%;
+    padding: 5%;
+  }
+  .blog .content h1 {
+    font-size: 2em;
+    line-height: 1.5em;
+  }
+  .blog .content h2 {
+    font-size: 1.5em;
+    line-height: 1.7em;
+  }
+  .blog .content h3 {
+    font-size: 1em;
+    line-height: 1.7em;
+  }
+  .blog .content p {
+    font-size: 1em;
+    line-height: 1.8em;
+  }
+  .blog .content p.date {
+    font-size: 0.8em;
+    margin-bottom: 3%;
+  }
+  .blog .content .image {
+    padding: 5% 0%;
+  }
+  .blog .content .image figcaption {
+    padding: 1% 0%;
+    font-size: 0.8em;
+    line-height: 1.5em;
+  }
+  .mini-menu {
+    width: 20%;
+    top: 12%;
+    left: 77%;
+  }
+  .mini-menu a {
+    font-size: 0.9em;
+    margin-bottom: 2%;
+    line-height: 2em;
+  }
+  /* Article Style */
+  .page-container {
+    width: 62%;
+    margin: 0% 19%;
+  }
+  .page-container .post-container .image {
+    min-height: 150px;
+  }
+  .page-container .post-container .text {
+    width: 90%;
+    padding: 5%;
+    line-height: 1.5em;
+  }
+  .page-container .post-container .text p.location {
+    font-size: 0.9em;
+  }
+  .page-container .post-container .text h1 {
+    font-size: 1.7em;
+    line-height: 1.5em;
+  }
+  .page-container .post-container .text p.author {
+    font-size: 0.9em;
+    margin-bottom: 3%;
+  }
+  .page-container .post-container .text p {
+    font-size: 1em;
+    line-height: 1.8em;
+  }
+  .page-container .post-container .control {
+    width: 96%;
+    padding: 2%;
+  }
+  .page-container .post-container .control a.edit-btn {
+    font-size: 0.9em;
+    padding: 10px 2%;
+  }
+  .page-container .post-container .control a.edit-btn i {
+    font-size: 0.8em;
+    margin-right: 5px;
+  }
+  .page-container .post-container .petition {
+    width: 90%;
+    padding: 5%;
+  }
+  .page-container .post-container .petition .petition-button {
+    padding: 12px 3%;
+    font-size: 1em;
+    margin-bottom: 3%;
+  }
+  .page-container .post-container .petition p {
+    font-size: 0.8em;
+    line-height: 1.5em;
+  }
+  .page-container .post-container .petition p i {
+    margin-right: 5px;
+  }
+  .page-container .related-container {
+    margin-top: 5%;
+  }
+  .page-container .related-container h2 {
+    margin-bottom: 2%;
+    font-size: 1.4em;
+    line-height: 1.5em;
+  }
+  .page-container .related-container .related-items {
+    padding: 2% 0%;
+    font-size: 1em;
+  }
+  .page-container .related-container .related-items .related-items-image {
+    width: 25%;
+  }
+  .page-container .related-container .related-items .related-items-image figcaption {
+    top: 40%;
+    width: 90%;
+    padding: 0% 5%;
+    font-size: 1em;
+    line-height: 1.5em;
+  }
+  .page-container .related-container .related-items .related-items-content {
+    width: 72%;
+    margin-left: 3%;
+  }
+  .page-container .related-container .related-items .related-items-content .content h3 {
+    font-size: 1.3em;
+    line-height: 1.5em;
+  }
+  .page-container .related-container .related-items .related-items-content .content p {
+    font-size: 1em;
+    line-height: 1.5em;
+  }
+  .page-container .related-container .related-items .related-items-content .content p.location {
+    font-size: 0.9em;
+  }
+  .page-container .related-container .related-items .related-items-content .content p.info {
+    font-size: 0.9em;
+    margin-bottom: 2%;
+  }
+  .page-container .related-container .related-items .related-items-content .content p.description {
+    font-size: 0.9em;
+  }
+  .page-container .related-container .related-empty-items {
+    padding: 5% 0%;
+    font-size: 1em;
+  }
+  .page-container .related-container .related-empty-items i {
+    margin-right: 10px;
+  }
+  .page-container .post-editor {
+    margin-bottom: 10%;
+  }
+  .page-container .post-editor .form-items {
+    width: 90%;
+    padding: 5%;
+  }
+  .page-container .post-editor .form-items h4 {
+    font-size: 1.4em;
+    line-height: 2em;
+  }
+  .page-container .post-editor .form-items p {
+    font-size: 1em;
+    line-height: 1.5em;
+  }
+  .page-container .post-editor .form-items p.caption {
+    font-size: 0.8em;
+    line-height: 2em;
+  }
+  .page-container .post-editor .form-items p.note {
+    font-size: 0.8em;
+  }
+  .page-container .post-editor .form-items .action-btn {
+    padding: 1.5% 2%;
+    font-size: 0.9em;
+    margin-top: 3%;
+  }
+  .page-container .post-editor .form-items .action-btn i {
+    margin-right: 10px;
+    font-size: 0.8em;
+  }
+  .page-container .post-editor .photo-form .photo-thumbnail {
+    min-height: 300px;
+    max-height: 500px;
+  }
+  .page-container .post-editor .photo-form .photo-thumbnail .photo-button {
+    top: 40%;
+    left: 35%;
+    width: 30%;
+    padding: 12px 0%;
+    font-size: 1em;
+  }
+  .page-container .post-editor .photo-form .photo-thumbnail .photo-button i {
+    margin-right: 10px;
+    font-size: 0.8em;
+  }
+  .page-container .post-editor .input-text {
+    width: 100%;
+    padding: 2% 0%;
+    font-size: 1em;
+    line-height: 1.5em;
+  }
+  .page-container .post-editor .input-text-topic {
+    font-size: 1.4em;
+  }
+  .page-container .post-editor .input-text-password {
+    font-size: 1.4em;
+    border-bottom: 1px solid #EEEEEE;
+    margin-bottom: 2%;
+  }
+  .page-container .post-editor .input-textarea {
+    height: 120px;
+    border-top: 1px solid #EEEEEE;
+  }
+  .page-container .post-editor .input-select {
+    width: 100%;
+    padding: 2%;
+    font-size: 1em;
+    line-height: 1.5em;
+    margin-bottom: 4%;
+  }
+  /* Progress style (Uploading) */
+  .progress-panel .message {
+    margin-top: 18%;
+    line-height: 2em;
+    font-size: 1em;
+    margin-bottom: 2%;
+  }
+  .progress-panel .message .caption {
+    font-size: 1em;
+  }
+  .progress-panel .message .caption i {
+    margin-right: 10px;
+  }
+  .progress-panel .progress {
+    width: 80%;
+    margin: 0% 10%;
+  }
+  .progress-panel .progress .progress-bar {
+    width: 60%;
+    height: 2px;
+  }
+  .progress-panel .cancel {
+    bottom: 20px;
+    right: 20px;
+    padding: 0.3% 0.5%;
+    line-height: 1.5em;
+    font-size: 0.8em;
+  }
+  .alert-box .box {
+    width: 30%;
+    top: 20%;
+    left: 35%;
+  }
+  .alert-box .box .box-content {
+    width: 80%;
+    padding: 10%;
+    font-size: 1em;
+    line-height: 1.5em;
+  }
+  .alert-box .box .box-content p.icon {
+    font-size: 4em;
+    margin-bottom: 5%;
+  }
+  .alert-box .box .btn {
+    width: 80%;
+    padding: 5% 10%;
+    font-size: 1em;
+  }
+  /* Footer Style */
+  footer.footer {
+    width: 98%;
+    padding: 3% 1%;
+    margin-top: 3%;
+    font-size: 0.9em;
+    line-height: 1.5em;
+  }
+}
+@media only screen and (min-width: 760px) and (max-width: 1023px) {
+  .filter .container {
+    margin-top: 10%;
+  }
+  .filter .container h1 {
+    font-size: 4em;
+    line-height: 1.5em;
+  }
+  .filter .container p {
+    font-size: 1em;
+    line-height: 1.5em;
+  }
+  .filter .container p.link {
+    margin-top: 6%;
+  }
+  .filter .container p.link a {
+    border: 1px solid #FFFFFF;
+    padding: 10px 15px;
+    margin: 0px 5px;
+    font-size: 0.9em;
+  }
+  .credit {
+    width: 98%;
+    font-size: 0.8em;
+    line-height: 1.5em;
+    padding: 1%;
+  }
+}
+@media only screen and (min-width: 520px) and (max-width: 759px) {
+  .filter .container {
+    margin-top: 30%;
+  }
+  .filter .container h1 {
+    font-size: 4em;
+    line-height: 1.5em;
+  }
+  .filter .container p {
+    font-size: 1em;
+    line-height: 1.5em;
+  }
+  .filter .container p.link {
+    margin-top: 10%;
+  }
+  .filter .container p.link a {
+    border: 1px solid #FFFFFF;
+    padding: 15px 15px;
+    margin: 0px 5px;
+    font-size: 0.9em;
+  }
+  .credit {
+    width: 98%;
+    font-size: 0.8em;
+    line-height: 1.5em;
+    padding: 1%;
+  }
+}
+@media only screen and (min-width: 0px) and (max-width: 519px) {
+  .filter .container {
+    width: 90%;
+    padding: 0% 5%;
+    margin-top: 15%;
+  }
+  .filter .container h1 {
+    font-size: 3em;
+    line-height: 1.5em;
+  }
+  .filter .container p {
+    font-size: 1em;
+    line-height: 1.5em;
+  }
+  .filter .container p.link {
+    margin-top: 10%;
+  }
+  .filter .container p.link a {
+    float: left;
+    display: inline-block;
+    width: 90%;
+    padding: 4% 0%;
+    margin: 0% 5%;
+    margin-bottom: 3%;
+    border: 1px solid #FFFFFF;
+    font-size: 1em;
+    background: rgba(255, 255, 255, 0.2);
+  }
+  .credit {
+    width: 96%;
+    font-size: 0.8em;
+    line-height: 1.5em;
+    padding: 2%;
+  }
+}
